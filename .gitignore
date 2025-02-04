@@ -1,8 +1,8 @@
 # Ignore all files in the notebooks folder
-notebooks/*
+# notebooks/*
 
 # Except for .ipynb files
-!notebooks/*.ipynb
+# !notebooks/*.ipynb
 
 # Ignore all files in the data folder
 data/*
