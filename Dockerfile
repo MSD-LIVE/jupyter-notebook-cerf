@@ -22,3 +22,8 @@ COPY --from=builder /opt/conda/lib/python3.11/site-packages /opt/conda/lib/pytho
 # To test this container locally, run:
 # docker build -t im3sfa/cerf-msdlive .
 # docker run --rm -p 8888:8888 im3sfa/cerf-msdlive
+
+# RUN mkdir -p /data
+ENV DATA_DIR=/data
+RUN rm -rf /opt/conda/lib/python3.11/site-packages/cerf/data
+RUN ln -s /data /opt/conda/lib/python3.11/site-packages/cerf/data
