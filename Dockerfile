@@ -24,10 +24,7 @@ COPY --from=builder /opt/conda/lib/python3.11/site-packages /opt/conda/lib/pytho
 # docker run --rm -p 8888:8888 im3sfa/cerf-msdlive
 
 # RUN mkdir -p /data
-# Switch back to the default user
+COPY notebooks /home/jovyan/notebooks
 ENV DATA_DIR=/data
 RUN rm -rf /opt/conda/lib/python3.11/site-packages/cerf/data
 RUN ln -s /data /opt/conda/lib/python3.11/site-packages/cerf/data
-
-USER jovyan
-COPY notebooks /home/jovyan/notebooks
