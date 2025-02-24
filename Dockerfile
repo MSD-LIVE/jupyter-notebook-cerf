@@ -25,6 +25,5 @@ COPY --from=builder /opt/conda/lib/python3.11/site-packages /opt/conda/lib/pytho
 
 # RUN mkdir -p /data
 COPY notebooks /home/jovyan/notebooks
-ENV DATA_DIR=/data
 RUN rm -rf /opt/conda/lib/python3.11/site-packages/cerf/data
 RUN ln -s /data /opt/conda/lib/python3.11/site-packages/cerf/data
