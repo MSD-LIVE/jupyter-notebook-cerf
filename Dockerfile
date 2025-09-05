@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM ghcr.io/msd-live/jupyter/python-notebook:latest as builder
+FROM ghcr.io/msd-live/jupyter/datascience-notebook:latest as builder
 
 USER root
 
