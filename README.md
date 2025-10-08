@@ -8,7 +8,7 @@ whenever changes are pushed to the main branch.
 **The data folder is too big, so we are not checking this into github. You will have
 to pull from s3 if you want to test locally**
 
-## Testing the notebook locally
+## Test the notebook locally
 
 1. Get the data
 
