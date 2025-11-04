@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM ghcr.io/msd-live/jupyter/datascience-notebook:dev as builder
+FROM ghcr.io/msd-live/jupyter/datascience-notebook:latest as builder
 
 USER root
 
@@ -10,7 +10,7 @@ RUN pip install --upgrade pip
 RUN pip install cerf
 
 # Stage 2: Final Stage
-FROM ghcr.io/msd-live/jupyter/datascience-notebook:dev
+FROM ghcr.io/msd-live/jupyter/datascience-notebook:latest
 
 USER root
 
